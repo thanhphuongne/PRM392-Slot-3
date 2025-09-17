@@ -61,7 +61,6 @@ fun BannerCard(
     modifier: Modifier = Modifier
 ) {
     Card(
-        shape = RoundedCornerShape(8.dp),
         modifier = Modifier
             .height(120.dp)
             .then(modifier)
