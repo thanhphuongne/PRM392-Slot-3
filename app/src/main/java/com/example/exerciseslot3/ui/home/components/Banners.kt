@@ -17,20 +17,19 @@ import androidx.compose.ui.platform.LocalContext
 import android.widget.Toast
 
 @Composable
-fun PromotionalBanners() {
+fun PromotionalBanners(onBannerClick: () -> Unit = {}) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        val context = LocalContext.current
         BannerCard(
             imageResId = R.drawable.banner_01,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(140.dp)
-                .clickable { Toast.makeText(context, "Banner 1 clicked", Toast.LENGTH_SHORT).show() }
+                .clickable { onBannerClick() }
         )
 
         Row(
@@ -42,7 +41,7 @@ fun PromotionalBanners() {
                 modifier = Modifier
                     .weight(1f)
                     .height(120.dp)
-                    .clickable { Toast.makeText(context, "Banner 2 clicked", Toast.LENGTH_SHORT).show() }
+                    .clickable { onBannerClick() }
             )
 
             BannerCard(
@@ -50,7 +49,7 @@ fun PromotionalBanners() {
                 modifier = Modifier
                     .weight(1f)
                     .height(120.dp)
-                    .clickable { Toast.makeText(context, "Banner 3 clicked", Toast.LENGTH_SHORT).show() }
+                    .clickable { onBannerClick() }
             )
         }
     }

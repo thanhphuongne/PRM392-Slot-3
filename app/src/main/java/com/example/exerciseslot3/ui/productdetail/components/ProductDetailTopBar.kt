@@ -18,7 +18,7 @@ import android.widget.Toast
 import androidx.compose.foundation.clickable
 
 @Composable
-fun ProductDetailTopBar() {
+fun ProductDetailTopBar(onBackClick: () -> Unit = {}) {
     val context = LocalContext.current
     Surface(color = MaterialTheme.colorScheme.primary) {
         Box(
@@ -42,7 +42,7 @@ fun ProductDetailTopBar() {
                 modifier = Modifier
                     .align(Alignment.CenterStart)
                     .size(24.dp)
-                    .clickable { Toast.makeText(context, "Back clicked", Toast.LENGTH_SHORT).show() }
+                    .clickable { onBackClick() }
             )
 
             // Cart with badge on the right

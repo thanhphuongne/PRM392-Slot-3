@@ -12,8 +12,11 @@ import com.example.exerciseslot3.ui.productdetail.components.ProductInfoSection
 import com.example.exerciseslot3.ui.theme.ExerciseSlot3Theme
 
 @Composable
-fun ProductDetailPage() {
-    Scaffold(topBar = { ProductDetailTopBar() }, bottomBar = { ProductDetailBottomBar() }) { inner ->
+fun ProductDetailPage(onNavigateBack: () -> Unit = {}) {
+    Scaffold(
+        topBar = { ProductDetailTopBar(onBackClick = onNavigateBack) },
+        bottomBar = { ProductDetailBottomBar() }
+    ) { inner ->
         Column(modifier = Modifier.fillMaxSize().padding(inner)) {
             ProductImageGallery()
             ProductInfoSection()
