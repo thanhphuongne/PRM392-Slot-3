@@ -40,12 +40,12 @@ fun FeaturedCategories() {
         val context = LocalContext.current
         // Prepare data and paging state first so header can show current page
         val baseCategories = listOf(
-            CategoryItem(stringResource(id = R.string.electronics), R.drawable.ic_launcher_foreground),
-            CategoryItem(stringResource(id = R.string.clothing), R.drawable.ic_launcher_foreground),
-            CategoryItem(stringResource(id = R.string.computers), R.drawable.ic_launcher_foreground),
-            CategoryItem(stringResource(id = R.string.home_kitchen), R.drawable.ic_launcher_foreground),
-            CategoryItem(stringResource(id = R.string.health_beauty), R.drawable.ic_launcher_foreground),
-            CategoryItem(stringResource(id = R.string.jewelry_watch), R.drawable.ic_launcher_foreground),
+            CategoryItem(stringResource(id = R.string.electronics), R.drawable.electronics),
+            CategoryItem(stringResource(id = R.string.clothing), R.drawable.clothing),
+            CategoryItem(stringResource(id = R.string.computers), R.drawable.computers),
+            CategoryItem(stringResource(id = R.string.home_kitchen), R.drawable.home_kitchen),
+            CategoryItem(stringResource(id = R.string.health_beauty), R.drawable.heath_beauty),
+            CategoryItem(stringResource(id = R.string.jewelry_watch), R.drawable.jewerly_watch),
             CategoryItem(stringResource(id = R.string.sports), R.drawable.ic_launcher_foreground),
             CategoryItem(stringResource(id = R.string.toys), R.drawable.ic_launcher_foreground),
             CategoryItem(stringResource(id = R.string.books), R.drawable.ic_launcher_foreground),
